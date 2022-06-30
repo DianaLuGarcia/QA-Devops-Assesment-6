@@ -84,6 +84,17 @@ app.get('/api/player', (req, res) => {
     }
 })
 
+// include and initialize the rollbar library with your access token
+var Rollbar = require('rollbar')
+var rollbar = new Rollbar({
+  accessToken: 'efb9dde94b454600a525a0fd0b86571f',
+  captureUncaught: true,
+  captureUnhandledRejections: true,
+})
+
+// record a generic message and send it to Rollbar
+rollbar.log('Hello world!')
+
 const port = process.env.PORT || 3000
 
 app.listen(port, () => {
