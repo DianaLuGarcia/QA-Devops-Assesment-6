@@ -3,17 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-
-
   "scripts": {
-    "test": "jest",
-    "start": "node server.js",
-    "server": "nodemon server.js",
-    "client": "npm start --prefix client",
-    "clientinstall": "npm install --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client" 
-    },
+    "test": "jest"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -22,11 +14,10 @@
     "@types/selenium-webdriver": "^4.0.16",
     "axios": "^0.27.2",
     "chromedriver": "^102.0.0",
-    "cors": "^2.8.5",
     "express": "^4.17.1",
     "geckodriver": "^2.0.4",
     "jest": "^27.3.1",
-    "rollbar": "^2.25.0",
+    "rollbar": "^2.24.0",
     "selenium-webdriver": "^4.0.0",
     "ts-jest": "^27.0.7",
     "ts-node": "^10.4.0",
