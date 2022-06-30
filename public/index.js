@@ -183,3 +183,4 @@ playAgainBtn.addEventListener('click', reset)
 seeAllBtn.addEventListener('click', getAllBots)
 
 getPlayerStats()
+

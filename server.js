@@ -3,19 +3,25 @@ const path = require('path')
 const app = express()
 const {bots, playerRecord} = require('./data')
 const {shuffleArray} = require('./utils')
-
+const cors = require('cors')
 app.use(express.json())
+app.use(cors())
 
-
-app.get('/',function(req,res) {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
-  });
-
+// app.get('/',function(req,res) {
+//     res.sendFile(path.join(__dirname, '../public/index.html'));
+//   });
+app.use(express.static (
+path.join(__dirname, 'public'))
+)
 app.get('/styles',function(req,res) {
-      res.sendFile(path.join(__dirname, 'index.css'));
+      res.sendFile(path.join(__dirname, 'public/index.css'));
  });
 
- 
+ app.get('/js',function(req,res) {
+    res.sendFile(path.join(__dirname, 'public/index.js'));
+});
+
+
 
 app.get('/api/robots', (req, res) => {
     try {
