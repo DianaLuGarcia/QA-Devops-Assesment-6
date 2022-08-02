@@ -11,8 +11,8 @@ app.use(cors())
 //     res.sendFile(path.join(__dirname, '../public/index.html'));
 //   });
 app.use(express.static (
-path.join(__dirname, 'public'))
-)
+path.join(__dirname, 'punpm start
+
 app.get('/styles',function(req,res) {
       res.sendFile(path.join(__dirname, 'public/index.css'));
  });
@@ -85,8 +85,8 @@ app.get('/api/player', (req, res) => {
 })
 
 // include and initialize the rollbar library with your access token
-var Rollbar = require('rollbar')
-var rollbar = new Rollbar({
+let Rollbar = require('rollbar')
+let rollbar = new Rollbar({
   accessToken: 'efb9dde94b454600a525a0fd0b86571f',
   captureUncaught: true,
   captureUnhandledRejections: true,
